@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/user_profile_image_container"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/user_profile_image_bottom_padding">
+        <ImageView
+            android:id="@+id/user_profile_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/user_profile_image_height">
+        </ImageView>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/user_avatar_image"
+        android:layout_width="@dimen/user_avatar_image_height"
+        android:layout_height="@dimen/user_avatar_image_height"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/user_avatar_image_right_margin"
+        android:layout_marginEnd="@dimen/user_avatar_image_right_margin"
+        android:layout_alignBottom="@id/user_profile_image_container"/>
+    <TextView
+        android:id="@+id/user_nick_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/user_nickname_text_size"
+        android:layout_toLeftOf="@id/user_avatar_image"
+        android:layout_toStartOf="@id/user_avatar_image"
+        android:layout_alignBottom="@id/user_profile_image_container"
+        android:layout_marginBottom="@dimen/user_nickname_bottom_margin"
+        android:layout_marginEnd="@dimen/user_nickname_right_margin"
+        android:layout_marginRight="@dimen/user_nickname_right_margin"/>
+</RelativeLayout>

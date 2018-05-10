@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="tweet_more_image_height">84dip</dimen>
+    <dimen name="tweet_more_image_width">84dip</dimen>
+</resources>

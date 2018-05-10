@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ext="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:paddingBottom="@dimen/tweet_base_view_top_padding"
+    android:paddingTop="@dimen/tweet_base_view_top_padding"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/tweet_sender_avatar_image"
+        android:layout_width="@dimen/tweet_sender_avatar_image_width"
+        android:layout_height="@dimen/tweet_sender_avatar_image_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="@dimen/tweet_avatar_image_left_margin"
+        android:layout_marginStart="@dimen/tweet_avatar_image_left_margin"
+        android:contentDescription="@string/tweet_sender_avatar_image_des" />
+    <TextView
+        android:id="@+id/tweet_sender_nick_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/primary_text_color"
+        android:layout_alignTop="@id/tweet_sender_avatar_image"
+        android:layout_marginTop="@dimen/tweet_nickname_top_margin"
+        android:layout_marginLeft="@dimen/tweet_content_left_margin"
+        android:layout_marginStart="@dimen/tweet_avatar_image_left_margin"
+        android:layout_toRightOf="@id/tweet_sender_avatar_image"
+        android:layout_toEndOf="@id/tweet_sender_avatar_image"
+        android:textSize="@dimen/tweet_nickname_text_size"/>
+    <com.bluejamesbond.text.DocumentView
+        android:id="@+id/tweet_sender_content_text"
+        android:layout_width="match_parent"
+        ext:documentView_antialias="true"
+        ext:documentView_cacheConfig="auto_quality"
+        ext:documentView_textColor="@color/primary_text_color"
+        ext:documentView_textSize="@dimen/tweet_content_text_size"
+        ext:documentView_textAlignment="justified"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tweet_sender_nick_text"
+        android:layout_marginTop="@dimen/tweet_nickname_bottom_margin"
+        android:layout_marginLeft="@dimen/tweet_content_left_margin"
+        android:layout_marginRight="12dip"
+        android:layout_marginEnd="12dip"
+        android:layout_marginStart="@dimen/tweet_avatar_image_left_margin"
+        android:layout_toRightOf="@id/tweet_sender_avatar_image"
+        android:layout_toEndOf="@id/tweet_sender_avatar_image" />
+
+</RelativeLayout>
